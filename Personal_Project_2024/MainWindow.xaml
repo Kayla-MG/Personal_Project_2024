@@ -15,22 +15,57 @@
                     <!-- Search box -->
                     <TextBox x:Name="playerSearch" Width="214" TextChanged="txtSearch_TextChanged" Text="Search Player" Margin="10,10,570,369" />
 
-                    <!-- Player list view -->
-                    <ListView x:Name="playerListView" Margin="10,56,420,45">
-                        <!-- Define ListView columns and data binding here -->
+                    <!-- Player list view with GridView columns -->
+                    <ListView x:Name="playerListView" Margin="10,56,395,55">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="120"/>
+                                <GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}" Width="50"/>
+                                <GridViewColumn Header="Position" DisplayMemberBinding="{Binding Position}" Width="100"/>
+                                <GridViewColumn Header="Team" DisplayMemberBinding="{Binding Team}" Width="120"/>
+                            </GridView>
+                        </ListView.View>
                     </ListView>
                 </Grid>
             </TabItem>
 
             <!-- Second Tab -->
             <TabItem Header="Team Management">
-                <!-- Add UI elements for team management here -->
+                <Grid>
+                    <ComboBox x:Name="teamComboBox" Width="200" Height="23" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="TeamComboBox_SelectionChanged" DisplayMemberPath="TeamName"/>
+                    <ListView x:Name="teamMembersListView" Margin="10,40,10,40">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="120"/>
+                                <GridViewColumn Header="Position" DisplayMemberBinding="{Binding Position}" Width="100"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Add Player" HorizontalAlignment="Left" Margin="10,300,0,10" Width="90" Click="AddPlayerButton_Click"/>
+                    <Button Content="Remove Player" HorizontalAlignment="Right" Margin="0,300,10,10" Width="110" Click="RemovePlayerButton_Click"/>
+                </Grid>
             </TabItem>
+
+
 
             <!-- Third Tab -->
             <TabItem Header="Match Management">
-                <!-- Add UI elements for match management here -->
+                <Grid>
+                    <ListView x:Name="matchesListView" Margin="10" Height="200">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Match ID" DisplayMemberBinding="{Binding MatchId}" Width="80"/>
+                                <GridViewColumn Header="Teams" DisplayMemberBinding="{Binding MatchInfo}" Width="140"/>
+                                <GridViewColumn Header="Date" DisplayMemberBinding="{Binding MatchDate, StringFormat=\{0:MM/dd/yyyy\}}" Width="100"/>
+                                <GridViewColumn Header="Score" DisplayMemberBinding="{Binding Score}" Width="80"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <TextBox x:Name="scoreTextBox" Width="100" Height="23" VerticalAlignment="Bottom" Margin="10,0,690,10"/>
+                    <Button Content="Update Score" Width="100" Height="23" VerticalAlignment="Bottom" Margin="120,0,580,10" Click="UpdateScore_Click"/>
+                </Grid>
             </TabItem>
+
 
         </TabControl>
     </Grid>
