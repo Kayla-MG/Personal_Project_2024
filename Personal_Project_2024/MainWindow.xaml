@@ -19,7 +19,7 @@
                     <ListView x:Name="playerListView" Margin="10,56,395,55">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="PlayerId" DisplayMemberBinding="{Binding PlayerId}" Width="80"/>
+                              
                                 <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="80"/>
                                 <GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}" Width="60"/>
                                 <GridViewColumn Header="Position" DisplayMemberBinding="{Binding Position}" Width="80"/>
@@ -37,7 +37,7 @@
                     <ListView x:Name="teamMembersListView" Margin="10,40,10,40">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="TeamID" DisplayMemberBinding="{Binding TeamId}" Width="100"/>
+                              
                                 <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="120"/>
                                 <GridViewColumn Header="Position" DisplayMemberBinding="{Binding Position}" Width="100"/>
                             </GridView>

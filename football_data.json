@@ -1,65 +1,83 @@
 {
   "players" : [
 {
-  "playerid" :45610 ,
-  "name" : "Grealish",
-  "age" :28,
-  "position" : "Midfield" ,
-  " team" : "Man City"
+  "Name" : "Grealish",
+  "Age" :28,
+  "Position" : "Midfield" ,
+  "Team" : "Man City"
 },
 {
-  "playerid" :4569 ,
-  "name" : "Haaland",
-  "age" : 23,
-  "position" : "Forward" ,
-  " team" : "Man City"
+  "Name" : "Haaland",
+  "Age" : 23,
+  "Position" : "Forward" ,
+  "Team" : "Man City"
 },
 {
-  "playerid" :45647 ,
-  "name" : "Foden",
-  "age" : 24,
-  "position" : "Midfield" ,
-  " team" : "Man City"
+  "Name" : "Foden",
+  "Age" : 24,
+  "Position" : "Midfield" ,
+  "Team" : "Man City"
 },
 {
-  "playerid" :12310 ,
-  "name" : "Rashford",
-  "age" : 26,
-  "position" : "Forward" ,
-  " team" : "Man United"
+  "Name" : "Rashford",
+  "Age" : 26,
+  "Position" : "Forward" ,
+  "Team" : "Man United"
 },
 {
-  "playerid" :12317 ,
-  "name" : "Garnacho",
-  "age" : 19,
-  "position" : "Forward" ,
-  " team" : "Man United"
+  "Name" : "Garnacho",
+  "Age" : 19,
+  "Position" : "Forward" ,
+  "Team" : "Man United"
 },
 {
-  "playerid" :1238 ,
-  "name" : "Fernandes",
-  "age" : 29,
-  "position" : "Midfield" ,
-  " team" : "Man United"
+  "Name" : "Fernandes",
+  "Age" : 29,
+  "Position" : "Midfield" ,
+  "Team" : "Man United"
 }
 ],
-"teams" : [
+"teams": [
   {
-    "teamid" : 123,
-    "name" : "Man United" ,
-    "players" : [
-      "Rashford",
-      "Garnacho",
-      "Fernandes"
+  
+    "TeamName": "Man United",
+    "Players": [
+      {
+        "Name": "Rashford",
+        "Age": 24,
+        "Position": "Forward"
+      },
+      {
+        "Name": "De Gea",
+        "Age": 30,
+        "Position": "Goalkeeper"
+      },
+      {
+        "Name": "Garnacho",
+        "Age": 19,
+        "Position": "Forward"
+      },
+      {
+        "Name": "Fernandes",
+        "Age": 29,
+        "Position": "Midfield"
+      }
     ]
   },
   {
-    "teamid" : 456,
-    "name" : "Man City" ,
-    "players" : [
-      "Grealish",
-      "Foden",
-      "Haaland"
+  
+    "TeamName": "Man City",
+    "Players": [
+      {
+        "Name": "Grealish",
+        "Age": 24,
+        "Position": "Forward"
+      },
+      {
+        "Name": "Foden",
+        "Age": 30,
+        "Position": "Goalkeeper"
+      }
     ]
   }
     ]
