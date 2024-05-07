@@ -1,0 +1,66 @@
+{
+  "players" : [
+{
+  "playerid" :45610 ,
+  "name" : "Grealish",
+  "age" :28,
+  "position" : "Midfield" ,
+  " team" : "Man City"
+},
+{
+  "playerid" :4569 ,
+  "name" : "Haaland",
+  "age" : 23,
+  "position" : "Forward" ,
+  " team" : "Man City"
+},
+{
+  "playerid" :45647 ,
+  "name" : "Foden",
+  "age" : 24,
+  "position" : "Midfield" ,
+  " team" : "Man City"
+},
+{
+  "playerid" :12310 ,
+  "name" : "Rashford",
+  "age" : 26,
+  "position" : "Forward" ,
+  " team" : "Man United"
+},
+{
+  "playerid" :12317 ,
+  "name" : "Garnacho",
+  "age" : 19,
+  "position" : "Forward" ,
+  " team" : "Man United"
+},
+{
+  "playerid" :1238 ,
+  "name" : "Fernandes",
+  "age" : 29,
+  "position" : "Midfield" ,
+  " team" : "Man United"
+}
+],
+"teams" : [
+  {
+    "teamid" : 123,
+    "name" : "Man United" ,
+    "players" : [
+      "Rashford",
+      "Garnacho",
+      "Fernandes"
+    ]
+  },
+  {
+    "teamid" : 456,
+    "name" : "Man City" ,
+    "players" : [
+      "Grealish",
+      "Foden",
+      "Haaland"
+    ]
+  }
+    ]
+  }
