@@ -12,6 +12,7 @@ namespace Personal_Project_2024
     {
         
         public string Name { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public int Age { get; set; }
         public string Position { get; set; }
         public string Team { get; set; }

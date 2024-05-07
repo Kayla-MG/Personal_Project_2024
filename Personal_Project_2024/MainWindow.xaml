@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!-- attempted to Set the background to an ImageBrush which worked but becuase i have used grids below you cannot see image so i had to change this
+        <Grid.Background>
+            <ImageBrush ImageSource= "C:/Users/35383/OneDrive - Atlantic TU/Year 2/Semester 4/OOD/Personal_Project_2024/image1.jpg"/>
+        </Grid.Background>
+         -->
         <TabControl>
             <!-- First Tab -->
             <TabItem Header="Player Management">
@@ -16,14 +21,15 @@
                     <TextBox x:Name="playerSearch" Width="214" TextChanged="txtSearch_TextChanged" Text="Search Player" Margin="10,10,570,369" />
 
                     <!-- Player list view with GridView columns -->
-                    <ListView x:Name="playerListView" Margin="10,56,395,55">
+                    <ListView x:Name="playerListView" Margin="10,56,39,55">
                         <ListView.View>
                             <GridView>
                               
-                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="80"/>
-                                <GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}" Width="60"/>
-                                <GridViewColumn Header="Position" DisplayMemberBinding="{Binding Position}" Width="80"/>
-                                <GridViewColumn Header="Team" DisplayMemberBinding="{Binding Team}" Width="80"/>
+                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="100"/>
+                                <GridViewColumn Header="DOB" DisplayMemberBinding="{Binding DateOfBirth}" Width="100"/>
+                                <GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}" Width="150"/>
+                                <GridViewColumn Header="Position" DisplayMemberBinding="{Binding Position}" Width="150"/>
+                                <GridViewColumn Header="Team" DisplayMemberBinding="{Binding Team}" Width="150"/>
                             </GridView>
                         </ListView.View>
                     </ListView>
@@ -44,8 +50,11 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button Content="Add Player" HorizontalAlignment="Left" Margin="10,300,0,10" Width="90" Click="AddPlayerButton_Click"/>
-                    <Button Content="Remove Player" HorizontalAlignment="Right" Margin="0,300,10,10" Width="110" Click="RemovePlayerButton_Click"/>
+                 
+                    <Button Content="Image 1" HorizontalAlignment="Left" Margin="10,300,0,10" Width="90" Click="AddPlayerButton_Click"/>
+                    <Image x:Name="displayedImage1" Width="200" Height="200"/>
+                    <Button Content="Image 2" HorizontalAlignment="Right" Margin="0,300,10,10" Width="110" Click="RemovePlayerButton_Click"/>
+                    <Image x:Name="displayedImage2" Width="200" Height="200" />
                     <TextBox x:Name="latestResultTextBox" HorizontalAlignment="Left" Margin="292,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="29"/>
                 </Grid>
             </TabItem>

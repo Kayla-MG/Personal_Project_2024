@@ -102,32 +102,16 @@ namespace Personal_Project_2024
         }
         private void AddPlayerButton_Click(object sender, RoutedEventArgs e)
         {
-            if (teamComboBox.SelectedItem is Team selectedTeam)
-            {
-                // Create a new player (you can use a dialog to input player details)
-                Player newPlayer = new Player { Name = "New Player", Position = "Midfielder" };
-
-                // Add the new player to the selected team
-                selectedTeam.Players.Add(newPlayer);
-
-                // Refresh the team members view
-                UpdateTeamMembersView();
-            }
+            // Set the image source to an image file path when "Add Player" button is clicked
+            displayedImage1.Source = new BitmapImage(new Uri("pack://application:,,,/Personal_Project_2024;component/images/image1.jpg"));
         }
-      
 
         private void RemovePlayerButton_Click(object sender, RoutedEventArgs e)
         {
-            if (teamComboBox.SelectedItem is Team selectedTeam && teamMembersListView.SelectedItem is Player selectedPlayer)
-            {
-                // Remove the selected player from the team
-                selectedTeam.Players.Remove(selectedPlayer);
-
-                // Refresh the team members view
-                UpdateTeamMembersView();
-            }
+            // Set the image source to another image file path when "Remove Player" button is clicked
+            displayedImage2.Source = new BitmapImage(new Uri("pack://application:,,,/Personal_Project_2024;component/images/image2.jpg"));
         }
-      
+
 
     }
 }
