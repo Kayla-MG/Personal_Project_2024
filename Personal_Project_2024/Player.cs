@@ -15,6 +15,7 @@ namespace Personal_Project_2024
         public int Age { get; set; }
         public string Position { get; set; }
         public string Team { get; set; }
+        public int GoalsScored { get; set; }
     }
 
 }

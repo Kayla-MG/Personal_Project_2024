@@ -28,6 +28,7 @@ namespace Personal_Project_2024
         //  private List<Team> teams = new List<Team>();
         private List<Player> allPlayers;
         private List<Team> teams; // Declare teams at the class level
+        private Team selectedTeam;
         public MainWindow()
         {
             InitializeComponent();
@@ -50,9 +51,14 @@ namespace Personal_Project_2024
 
                 //Populate allPlayers list with players from FootballData
                 allPlayers = footballData.Players;
+                teams = footballData.Teams;
 
                 //update the player list view with all players data
                 playerListView.ItemsSource = allPlayers;
+
+                //update combobox with team names 
+                teamComboBox.ItemsSource = teams;
+                teamComboBox.DisplayMemberPath = "TeamName";
             }
             catch (Exception ex)
             {
@@ -61,7 +67,17 @@ namespace Personal_Project_2024
         }
         private void TeamComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            UpdateTeamMembersView();
+            UpdateTeamDetails();
+        }
+        private void UpdateTeamDetails()
+        {
+            if (teamComboBox.SelectedItem is Team selectedTeam)
+            {
+                teamMembersListView.ItemsSource = selectedTeam.Players;
+
+                // Display the LatestResult of the selected team
+                latestResultTextBox.Text = selectedTeam.LatestResult;
+            }
         }
         private void UpdateTeamMembersView()
         {

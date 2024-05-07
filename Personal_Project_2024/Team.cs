@@ -13,6 +13,7 @@ namespace Personal_Project_2024
     {
        
         public string TeamName { get; set; }
+        public string LatestResult { get; set; }
         public List<Player> Players { get; set; } = new List<Player>();
 
     }

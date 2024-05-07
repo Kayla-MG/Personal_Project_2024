@@ -37,14 +37,16 @@
                     <ListView x:Name="teamMembersListView" Margin="10,40,10,40">
                         <ListView.View>
                             <GridView>
-                              
+
                                 <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="120"/>
                                 <GridViewColumn Header="Position" DisplayMemberBinding="{Binding Position}" Width="100"/>
+                                <GridViewColumn Header="GoalsScored" DisplayMemberBinding="{Binding GoalsScored}" Width="100"/>
                             </GridView>
                         </ListView.View>
                     </ListView>
                     <Button Content="Add Player" HorizontalAlignment="Left" Margin="10,300,0,10" Width="90" Click="AddPlayerButton_Click"/>
                     <Button Content="Remove Player" HorizontalAlignment="Right" Margin="0,300,10,10" Width="110" Click="RemovePlayerButton_Click"/>
+                    <TextBox x:Name="latestResultTextBox" HorizontalAlignment="Left" Margin="292,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="29"/>
                 </Grid>
             </TabItem>
 
